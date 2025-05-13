@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #11998e 10%, #38ef7d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: all 0.4s ease;
+    transition: transform 0.5s box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.social-btn:hover::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0.205) 0%,
+            rgba(255, 255, 255, 0.103) 45%,
+            rgba(255, 255, 255, 0.048) 50%);
+    transform: rotate(30deg);
+    transition: all 0.3s ease;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.title {
+    color: #6c757d;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-btn {
+    background: linear-gradient(to right, #4776E6 0%, #8E54E9 100%);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(12, 48, 233, 0.4);
+}
+
+.social-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(142, 84, 233, 0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* resposiv di layar hahpeh */
+
+@media (max-width: 600px) {
+    .card {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
